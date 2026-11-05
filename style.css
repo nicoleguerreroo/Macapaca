@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-verde: #BBC54F;
+  --color-amarillo: #FFFB86;
+  --color-crema: #F4F5F0;
+  --color-marron: #422504;
+
+  --font-titulo: "Ranchers", cursive;
+  --font-subtitulo: "Instrument Serif", serif;
+  --font-texto: "Questrial", sans-serif;
+}
+
+
+@keyframes flotar {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes suavizar-aparicion {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@layer utilities {
+  .animacion-flotar {
+    animation: flotar 3s ease-in-out infinite;
+  }
+
+  .transicion-tema {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--color-verde);
+    outline-offset: 2px;
+  }
+}
+

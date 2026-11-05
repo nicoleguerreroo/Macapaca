@@ -36,37 +36,37 @@
     </script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-stone-100 text-stone-800 font-texto dark:bg-[#2A1810] dark:text-amber-100/90 transition-colors">
+<body class="bg-stone-100 text-stone-800 font-texto dark:bg-[#2A1810] dark:text-amber-100/90 transition-colors duration-300 ease-out">
 
     <!-- Header -->
-    <header class="bg-marron text-crema dark:bg-[#1A0E0A] dark:border-b dark:border-amber-900/30">
-        <nav class="max-w-5xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+    <header class="bg-marron text-crema dark:bg-[#1A0E0A] dark:border-b dark:border-amber-900/30 transition-all duration-300 ease-out">
+        <nav aria-label="Navegación principal" class="max-w-5xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="w-full md:w-auto flex justify-between items-center">
-                <a href="#" class="font-titulo text-3xl font-bold tracking-wide text-crema">MacaPaca</a>
+                <a href="#" class="font-titulo text-3xl font-bold tracking-wide text-crema hover:opacity-90 transition-opacity duration-300 ease-out">MacaPaca</a>
                 <!-- Botón menú móvil -->
-                <button id="boton-menu" aria-expanded="false" class="md:hidden px-3 py-1 border border-crema/40 rounded font-bold text-sm">
+                <button id="boton-menu" aria-expanded="false" class="md:hidden px-3 py-1 border border-crema/40 rounded font-bold text-sm transition-all duration-300 ease-out">
                     Menú
                 </button>
             </div>
 
             <!-- Menú navegación -->
             <ul id="menu" class="hidden md:flex flex-col md:flex-row gap-8 text-xs font-bold uppercase tracking-widest text-center">
-                <li><a href="#productos" class="hover:text-amber-200 transition">Nuestros Panes</a></li>
-                <li><a href="#novedades" class="hover:text-amber-200 transition">Novedades</a></li>
-                <li><a href="#horario" class="hover:text-amber-200 transition">Horario</a></li>
-                <li><a href="#contacto" class="hover:text-amber-200 transition">Contacto</a></li>
+                <li><a href="#productos" class="hover:text-amber-200 transition-colors duration-300 ease-out">Nuestros Panes</a></li>
+                <li><a href="#novedades" class="hover:text-amber-200 transition-colors duration-300 ease-out">Novedades</a></li>
+                <li><a href="#horario" class="hover:text-amber-200 transition-colors duration-300 ease-out">Horario</a></li>
+                <li><a href="#contacto" class="hover:text-amber-200 transition-colors duration-300 ease-out">Contacto</a></li>
             </ul>
 
             <!-- Botón modo oscuro -->
-            <button id="boton-tema" aria-pressed="false" class="text-xs px-3 py-1 border border-crema/40 rounded hover:bg-crema hover:text-marron transition font-bold">
+            <button id="boton-tema" aria-pressed="false" class="text-xs px-3 py-1 border border-crema/40 rounded hover:bg-crema hover:text-marron font-bold transition-all duration-300 ease-out">
                 Modo oscuro
             </button>
         </nav>
     </header>
 
     <main>
-        <!-- Sección Principal (Hero) -->
-        <section class="bg-[#F6F3DF] dark:bg-[#382015] border-b-4 border-green-900 dark:border-[#F6F3DF]">
+        <!-- Sección principal -->
+        <section class="bg-[#F6F3DF] dark:bg-[#382015] border-b-4 border-green-900 dark:border-[#F6F3DF] transition-all duration-300 ease-out">
             <div class="max-w-5xl mx-auto px-6 py-20 text-center">
                 <p class="text-sm font-bold uppercase tracking-widest text-red-700 dark:text-amber-200/90">Masa madre y horno de piedra</p>
                 <h1 class="mt-3 font-subtitulo text-4xl md:text-6xl font-bold text-green-900 dark:text-amber-100">El olor a pan recién hecho de toda la vida</h1>
@@ -74,19 +74,19 @@
                     Barras crujientes, hogazas de masa madre, bollería recién horneada y magdalenas caseras.
                     Harinas seleccionadas y fermentación lenta cada madrugada.
                 </p>
-                <!-- Botón de horario manteniendo el color rojo -->
-                <a href="#horario" class="inline-block mt-8 px-6 py-3 rounded-full bg-red-700 text-white font-bold hover:bg-red-800 transition">Ver horario</a>
+                <!-- Botón de horario -->
+                <a href="#horario" class="inline-block mt-8 px-6 py-3 rounded-full bg-red-700 text-white font-bold hover:bg-red-800 transition-all duration-300 ease-out">Ver horario</a>
             </div>
         </section>
 
         <!-- Productos -->
-        <section id="productos" class="bg-[#FAF9F5] dark:bg-[#F6F3DF] transition-colors py-16">
+        <section id="productos" class="bg-[#FAF9F5] dark:bg-[#F6F3DF] py-16 transition-all duration-300 ease-out">
             <div class="max-w-5xl mx-auto px-6">
                 <h2 class="mb-10 font-subtitulo text-3xl md:text-4xl font-bold text-center text-green-900 dark:text-[#2A1810]">Qué encontrará en el obrador</h2>
 
                 <div class="grid gap-6 md:grid-cols-3">
                     <!-- Tarjeta 1 -->
-                    <article class="p-6 rounded-xl bg-white dark:bg-[#382015] shadow-md border-t-8 border-green-900 dark:border-emerald-700/60 transition hover:-translate-y-1 hover:shadow-xl">
+                    <article data-aos="fade-up" class="p-6 rounded-xl bg-white dark:bg-[#382015] shadow-md border-t-8 border-green-900 dark:border-emerald-700/60 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl">
                         <h3 class="font-subtitulo text-2xl font-bold text-stone-800 dark:text-amber-100">Pan Artesanal</h3>
                         <p class="mt-2 text-stone-600 dark:text-amber-100/70">Elaborados a diario con fermentación natural de 24 horas.</p>
                         <ul class="mt-4 space-y-1 text-sm list-disc list-inside text-stone-700 dark:text-amber-100/70">
@@ -97,7 +97,7 @@
                     </article>
 
                     <!-- Tarjeta 2 -->
-                    <article class="p-6 rounded-xl bg-white dark:bg-[#382015] shadow-md border-t-8 border-red-700 dark:border-rose-700/60 transition hover:-translate-y-1 hover:shadow-xl">
+                    <article data-aos="fade-up" data-aos-delay="100" class="p-6 rounded-xl bg-white dark:bg-[#382015] shadow-md border-t-8 border-red-700 dark:border-rose-700/60 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl">
                         <h3 class="font-subtitulo text-2xl font-bold text-stone-800 dark:text-amber-100">Repostería Tradicional</h3>
                         <p class="mt-2 text-stone-600 dark:text-amber-100/70">Recetas de la abuela horneadas cada mañana.</p>
                         <ul class="mt-4 space-y-1 text-sm list-disc list-inside text-stone-700 dark:text-amber-100/70">
@@ -108,7 +108,7 @@
                     </article>
 
                     <!-- Tarjeta 3 -->
-                    <article class="p-6 rounded-xl bg-white dark:bg-[#382015] shadow-md border-t-8 border-amber-500 dark:border-amber-600/60 transition hover:-translate-y-1 hover:shadow-xl">
+                    <article data-aos="fade-up" data-aos-delay="200" class="p-6 rounded-xl bg-white dark:bg-[#382015] shadow-md border-t-8 border-amber-500 dark:border-amber-600/60 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl">
                         <h3 class="font-subtitulo text-2xl font-bold text-stone-800 dark:text-amber-100">Especialidades</h3>
                         <p class="mt-2 text-stone-600 dark:text-amber-100/70">Para tus desayunos, meriendas y celebraciones.</p>
                         <ul class="mt-4 space-y-1 text-sm list-disc list-inside text-stone-700 dark:text-amber-100/70">
@@ -121,25 +121,27 @@
             </div>
         </section>
 
-        <!-- Sección Novedades (Caja amarilla) -->
-        <section id="novedades" class="max-w-5xl mx-auto px-6 py-12">
-            <div data-aos="fade-up" class="p-8 rounded-3xl bg-[#F8E794] border-2 border-amber-300 shadow-md text-center text-marron">
-                <span class="inline-block px-5 py-1.5 bg-red-700 text-white font-bold text-xs uppercase tracking-widest rounded-full shadow-sm">
-                    Novedad de la semana
-                </span>
-                <h3 class="mt-4 font-subtitulo text-3xl md:text-5xl font-bold text-marron">
-                    Pan Especial de Masa Madre con Nueces y Pasas
-                </h3>
-                <p class="mt-4 max-w-xl mx-auto text-base md:text-lg font-medium text-marron/90">
-                    Horneado únicamente los viernes y sábados. ¡Haz tu encargo con antelación!
-                </p>
+        <!-- Sección novedades -->
+        <section id="novedades" class="border-t-4 border-green-900 dark:border-[#F6F3DF] py-12 transition-all duration-300 ease-out">
+            <div class="max-w-5xl mx-auto px-6">
+                <div data-aos="fade-up" class="p-8 rounded-3xl bg-[#F8E794] border-2 border-amber-300 shadow-md text-center text-marron transition-all duration-300 ease-out hover:shadow-lg">
+                    <span class="inline-block px-5 py-1.5 bg-red-700 text-white font-bold text-xs uppercase tracking-widest rounded-full shadow-sm">
+                        Novedad de la semana
+                    </span>
+                    <h3 class="mt-4 font-subtitulo text-3xl md:text-5xl font-bold text-marron">
+                        Pan Especial de Masa Madre con Nueces y Pasas
+                    </h3>
+                    <p class="mt-4 max-w-xl mx-auto text-base md:text-lg font-medium text-marron/90">
+                        Horneado únicamente los viernes y sábados. ¡Haz tu encargo con antelación!
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- Horario y contacto (Línea divisoria cambiada a crema) -->
-        <section id="horario" class="bg-white dark:bg-[#2A1810] border-y-4 border-green-900 dark:border-[#F6F3DF]">
+        <!-- Horario y contacto -->
+        <section id="horario" class="bg-white dark:bg-[#2A1810] border-y-4 border-green-900 dark:border-[#F6F3DF] transition-all duration-300 ease-out">
             <div class="max-w-5xl mx-auto px-6 py-16 flex flex-col gap-8 md:flex-row">
-                <div class="flex-1 p-6 rounded-xl bg-[#F6F3DF] dark:bg-[#382015] border dark:border-amber-900/30">
+                <div data-aos="fade-up" class="flex-1 p-6 rounded-xl bg-[#F6F3DF] dark:bg-[#382015] border dark:border-amber-900/30 transition-all duration-300 ease-out hover:shadow-md">
                     <h2 class="font-subtitulo text-3xl font-bold text-green-900 dark:text-amber-200">Horario</h2>
                     <ul class="mt-4 space-y-2">
                         <li class="flex justify-between gap-4 border-b border-amber-300 dark:border-amber-900/40 pb-2"><span>Lunes a viernes</span><strong class="text-right">7:00 a 14:30 y 17:00 a 20:00</strong></li>
@@ -148,7 +150,7 @@
                     </ul>
                 </div>
 
-                <div id="contacto" class="flex-1 p-6 rounded-xl bg-green-900 dark:bg-[#1F120B] text-amber-50 border dark:border-amber-900/40">
+                <div id="contacto" data-aos="fade-up" data-aos-delay="100" class="flex-1 p-6 rounded-xl bg-green-900 dark:bg-[#1F120B] text-amber-50 border dark:border-amber-900/40 transition-all duration-300 ease-out hover:shadow-md">
                     <h2 class="font-subtitulo text-3xl font-bold dark:text-amber-200">Dónde estamos</h2>
                     <p class="mt-4">Plaza de la Hornilla, 4<br>Barrio de San José, Madrid</p>
                     <p class="mt-4 text-2xl font-bold text-amber-300 dark:text-crema">914 22 88 10</p>
@@ -157,11 +159,11 @@
         </section>
     </main>
 
-    <footer class="py-6 text-center text-sm text-stone-500 dark:text-amber-100/60">
+    <footer class="py-6 text-center text-sm text-stone-500 dark:text-amber-100/60 transition-colors duration-300 ease-out">
         <p>MacaPaca · Panadería y Obrador Artesanal · Desde 1985</p>
     </footer>
 
-    <!-- JS de AOS (Librería JS adicional) -->
+    <!-- JS de AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- archivo script.js -->
     <script src="script.js"></script>

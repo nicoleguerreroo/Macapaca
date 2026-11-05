@@ -1,9 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. Menú Móvil
   const botonMenu = document.querySelector('#boton-menu');
   const menu = document.querySelector('#menu');
   const enlacesMenu = document.querySelectorAll('#menu a');
+  
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+        duration: 100,
+        easing: 'ease-out',
+        once: true,
+        offset: 10
+        });
+    }
 
   if (botonMenu && menu) {
     botonMenu.addEventListener('click', () => {
