@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@tailwind base;
+@tailwind components;
+@tailwinds utilities;
+
 
 @theme {
   --color-verde: #BBC54F;
@@ -54,5 +58,37 @@
     outline: 2px solid var(--color-verde);
     outline-offset: 2px;
   }
+}
+
+.marquee {
+    --gap: 2rem;
+    display: flex;
+    gap: var(--gap);
+    overflow: hidden;
+    user-select: none;
+    padding: 0.9rem 0;
+}
+
+.marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee__content li {
+    white-space: nowrap;
+}
+
+/* Pausa al pasar el ratón */
+.marquee:hover .marquee__content {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% - var(--gap))); }   /* su ancho + el hueco entre las dos listas */
 }
 
