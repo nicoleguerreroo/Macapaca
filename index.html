@@ -14,6 +14,15 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="stylesheet" href="style.css">
+    
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <!-- fin jquery -->
+    <script src="https://unpkg.com/feather-icons"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -44,7 +53,7 @@
 <body class="bg-stone-100 text-stone-800 font-texto dark:text-amber-100/90 transition-colors duration-300 ease-out">
 
     <!-- Header -->
-    <header class="bg-[url(/img/pan02.png)] bg-cover bg-no-repeat dark:bg-[url(/img/pan02.png)] transition-all duration-300 ease-out">
+    <header class="bg-[url(/img/pan02.png)] bg-cover bg-no-repeat bg-fixed dark:bg-[url(/img/pan02.png)] transition-all duration-300 ease-out">
 
         
         <nav aria-label="Navegación principal" class="max-w-5xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -210,7 +219,7 @@
         </section>
 
         <!-- Sección novedades -->
-        <section id="novedades" class="pb-36 bg-crema dark:bg-marronoscuro py-12 transition-all duration-300 ease-out">
+        <section id="novedades" class="pb-30 bg-crema dark:bg-marronoscuro py-12 transition-all duration-300 ease-out">
             <div class="max-w-5xl mx-auto px-6">
                 <div data-aos="fade-up" class="p-8 rounded-3xl bg-amarillo dark:bg-crema border-amber-300 shadow-md text-center text-marron transition-all duration-300 ease-out hover:shadow-lg">
                     <span class="inline-block px-5 py-1.5 mb-3 bg-cremaclaro dark:bg-marronoscuro text-marron dark:text-crema font-bold text-xs uppercase tracking-widest rounded-full shadow-sm">
@@ -228,11 +237,41 @@
             </div>
         </section>
 
+        <!-- Counter -->
+         <div class="counter-up">
+            <div class="content">
+                <div class="box">
+                    <div class="icon"><i data-feather="clock"></i></div>
+                    <div class="counter">41</div>
+                    <div class="text">años de tradición</div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i data-feather="heart"></i></div>
+                    <div class="counter">1000</div>
+                    <div class="text">clientes satisfechos</div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i data-feather="gift"></i></div>
+                    <div class="counter">300</div>
+                    <div class="text">celebraciones atendidas</div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i data-feather="smile"></i></div>
+                    <div class="counter">5000</div>
+                    <div class="text">panes horneados</div>
+                </div>
+
+            </div>
+         </div>
+
         <!-- Reseñas clientes -->
         <section class="bg-amarillo dark:bg-crema pt-8 pb-8 from-slate-200 to-slate-50  text-slate-800 flex flex-col justify-center items-center min-h-96 relative px-4">
         <section class="bg-cremaclaro dark:bg-marronclaro my-4 w-full max-w-2xl rounded-3xl text-center p-8 sm:p-16 [&_*]:ease-in-out">
             <h1 class="text-amarillo dark:text-crema text-5xl font-titulo">Lo que dicen de nosotras</h1>
-            <p class="text-base mt-2 text-marron dark:text-crema">Vuestras palabras son el mejor ingrediente de nuestro trabajo.</p>
+            <p class="font-subtitulo text-2xl mt-2 text-marron dark:text-crema mb-10">Vuestras palabras son el mejor ingrediente de nuestro trabajo.</p>
 
             <div class="mt-6 grid grid-cols-1 sm:grid-cols-[60px_auto_60px] [grid-template-areas:'slider_slider'_'nav-left_nav-right'] sm:[grid-template-areas:'nav-left_slider_nav-right'] gap-2 sm:gap-6
                 [&>button]:rounded-full
@@ -323,7 +362,21 @@
 
     <!-- JS de AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".counter").counterUp({
+                delay: 10,
+                time: 1200
+            });
+        });
+    </script>
+
     <!-- archivo script.js -->
     <script src="script.js"></script>
+
+    <script>
+      feather.replace();
+    </script>
 </body>
 </html>
